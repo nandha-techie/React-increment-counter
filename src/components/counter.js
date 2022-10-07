@@ -1,11 +1,6 @@
 export default class Counter extends React.Component {
     constructor(props) {
         super(props)
-    //    this.state = {
-    //        value: this.props.counter.value
-    //     //    id: this.props.id
-    //    }
-        
         this.style = {
             fontSize: 15,
             fontWeight: 'bold'
@@ -13,9 +8,7 @@ export default class Counter extends React.Component {
         
         this.formatCount = this.formatCount.bind(this);
         this.getBadgeClasses = this.getBadgeClasses.bind(this); 
-
     }
-
     getBadgeClasses() {
         let classes = "badge m-2 badge-";
         classes += (this.props.counter.value == 0) ? "warning" : "primary";
@@ -23,7 +16,6 @@ export default class Counter extends React.Component {
     }
 
     formatCount(){
-        // console.log(this.props.counter)
         const value = this.props.counter.value;
         return value == 0 ? 'Zero' : value;
     }
